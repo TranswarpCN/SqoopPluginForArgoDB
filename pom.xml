@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.transwarp.holodesk</groupId>
+    <artifactId>SqoopPluginForArgoDB</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-core</artifactId>
+            <version>2.7.2-transwarp-7.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>2.7.2-transwarp-7.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sqoop</groupId>
+            <artifactId>sqoop</artifactId>
+            <version>1.4.6</version>
+            <scope>system</scope>
+            <systemPath>/workspace/jars/sqoop-1.4.6-hadoop23.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>io.transwarp.nucleon</groupId>
+            <artifactId>inceptor-holodesk</artifactId>
+            <version>8.31.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.transwarp.holodesk</groupId>
+            <artifactId>argodb-sink</artifactId>
+            <version>8.31.2</version>
+            <scope>system</scope>
+            <systemPath>/workspace/develop/argodb-sink/target/argodb-sink-client-8.31.2.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+</project>
