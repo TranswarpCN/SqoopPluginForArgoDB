@@ -1,9 +1,6 @@
 # SqoopPluginForArgoDB - ArgoDB Sqoop 连接器
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/yourusername/SqoopPluginForArgoDB)](https://github.com/yourusername/SqoopPluginForArgoDB/releases)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/SqoopPluginForArgoDB/ci.yml)](https://github.com/yourusername/SqoopPluginForArgoDB/actions)
-[![Code Coverage](https://img.shields.io/codecov/c/github/yourusername/SqoopPluginForArgoDB)](https://codecov.io/gh/yourusername/SqoopPluginForArgoDB)
 
 ## 项目概述
 
