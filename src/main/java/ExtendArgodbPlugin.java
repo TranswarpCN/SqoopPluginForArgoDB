@@ -6,8 +6,8 @@ import java.util.List;
 
 public class ExtendArgodbPlugin extends ToolPlugin {
 
-    @Override
-    public List<ToolDesc> getTools() {
-        return Collections.singletonList(new ToolDesc("argodbSqoopTool", ArgodbSqoopTool.class, "外部数据源的数据导入holodesk"));
-    }
+  @Override
+  public List<ToolDesc> getTools() {
+    return Collections.singletonList(new ToolDesc("argodbSqoopTool", ArgodbSqoopTool.class, "外部数据源的数据导入holodesk"));
+  }
 }
