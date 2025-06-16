@@ -23,7 +23,7 @@ public class ArgodbSqoopTool extends ImportTool {
     public static String COMPRESSION_TYPE = "compression-type";
     public static String ARGO_SOURCE_COLNAMES = "argo-source-colnames";
 
-    private ArgoDBCodeGenTool codeGenerator = new ArgoDBCodeGenTool();
+    private final ArgoDBCodeGenTool codeGenerator = new ArgoDBCodeGenTool();
 
     @Override
     public int run(SqoopOptions sqoopOptions) {
@@ -39,9 +39,7 @@ public class ArgodbSqoopTool extends ImportTool {
             Configuration conf = sqoopOptions.getConf();
 //            conf.set(RECORD_DELIM,  "" + sqoopOptions.getOutputRecordDelim());
             importer.runImport(tableName, jarFile, sqoopOptions.getSplitByCol(), conf);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ImportException e) {
+        } catch (IOException | ImportException e) {
             throw new RuntimeException(e);
         } finally {
             this.destroy(sqoopOptions);

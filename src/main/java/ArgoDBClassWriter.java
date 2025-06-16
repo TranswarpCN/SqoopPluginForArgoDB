@@ -32,8 +32,7 @@ public class ArgoDBClassWriter extends ClassWriter {
 
     // Translate all the column names into names that are safe to
     // use as identifiers.
-    String[] cleanedColNames = argoCleanColNames(colNames);
-    this.colNames = cleanedColNames;
+    this.colNames = argoCleanColNames(colNames);
 
   }
 
@@ -44,12 +43,13 @@ public class ArgoDBClassWriter extends ClassWriter {
   /**
    * Create a list of identifiers to use based on the true column names
    * of the table.
+   *
    * @param colNames the actual column names of the table.
    * @return a list of column names in the same order which are
    * cleaned up to be used as identifiers in the generated Java class.
    */
-  private String [] argoCleanColNames(String [] colNames) {
-    String [] cleanedColNames = new String[colNames.length];
+  private String[] argoCleanColNames(String[] colNames) {
+    String[] cleanedColNames = new String[colNames.length];
     for (int i = 0; i < colNames.length; i++) {
       String col = colNames[i];
       String identifier = ClassWriter.toJavaIdentifier(col);
