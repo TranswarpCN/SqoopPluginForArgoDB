@@ -14,9 +14,9 @@ import org.apache.commons.logging.LogFactory;
  * Created by zhehaozhang on 22-12-6.
  */
 public class ArgoDBCodeGenTool extends CodeGenTool {
-  public static final Log LOG = LogFactory.getLog(CodeGenTool.class.getName());
+  public static final Log LOG = LogFactory.getLog(ArgoDBCodeGenTool.class.getName());
 
-  private List<String> argoGeneratedJarFiles;
+  private final List<String> argoGeneratedJarFiles;
 
   public ArgoDBCodeGenTool() {
     super();
@@ -25,8 +25,7 @@ public class ArgoDBCodeGenTool extends CodeGenTool {
 
   @Override
   public List<String> getGeneratedJarFiles() {
-    ArrayList<String> out = new ArrayList<String>(argoGeneratedJarFiles);
-    return out;
+    return new ArrayList<String>(argoGeneratedJarFiles);
   }
 
 
